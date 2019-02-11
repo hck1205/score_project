@@ -1,0 +1,134 @@
+.popupContainer {
+    position: absolute;
+    z-index: 3;
+    border: 1px solid #dcd9d9;
+}
+
+.popupHeader {
+    width: 329px;
+    height: 53px;
+    background-color: #3d93cc;
+    position: relative;
+}
+
+.popupSeqNo {
+    width: 39px;
+    hieght: 22px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    border-radius: 11px;
+    top: 15px;
+    left: 25px;
+    position: absolute;
+    font-size: 12px;
+    line-height: 2;
+}
+
+.popupTeamTitle {
+    position: relative;
+    top: 21px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #ffffff;
+    letter-spacing: 1px;
+}
+
+.popupBodyPadding {
+    width: 312px;
+    height: 15px;
+    background-color: #ffffff;
+    position: absolute;
+    margin-top: 187px;
+}
+
+.popupBody {
+    width: 329px;
+    height: 190px;
+    background-color: #ffffff;
+    overflow: auto;
+    text-align: left;
+}
+
+.popupOddElement {
+    margin-left: 20px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.popupBodyHeader {
+    font-weight: bold;
+    font-size: 12px;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+.oddCreatedAt {
+    font-weight: normal;
+    display: inline-block;
+    margin-left: 5px;
+    color: #969696;
+}
+
+.oddOptions {
+    margin-top: 6px;
+    font-size: 12px;
+    color: #000000;
+    display: inline-block;
+    margin-right: 6px;
+    letter-spacing: 0.5px;
+}
+
+.oddWin {
+    margin-top: 6px;
+    font-size: 12px;
+    color: #FF530D;
+    display: inline-block;
+    margin-right: 6px;
+}
+
+.oddDraw {
+    margin-top: 6px;
+    font-size: 12px;
+    display: inline-block;
+    margin-right: 6px;
+}
+
+.oddLost {
+    margin-top: 6px;
+    font-size: 12px;
+    color: #4a75cc;
+    display: inline-block;
+    margin-right: 6px;
+}
+
+.odd {
+    margin-top: 6px;
+    font-size: 12px;
+    display: inline-block;
+}
+
+/*Popup Box Close Button*/
+.popupCloseBtn {
+    position: absolute;
+    right: 18px;
+    top: 9px;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    cursor: hand;
+}
+.popupCloseBtn:before, .popupCloseBtn:after {
+    position: absolute;
+    left: 15px;
+    content: ' ';
+    height: 35px;
+    width: 1px;
+    background-color: #ffffff;
+}
+.popupCloseBtn:before {
+    transform: rotate(45deg);
+}
+.popupCloseBtn:after {
+    transform: rotate(-45deg);
+}
+/*End Popup Box Close Button*/

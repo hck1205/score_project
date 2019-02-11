@@ -1,0 +1,191 @@
+.seqNum {
+    background-color: #f8f9fb;
+    width: 49px;
+    height: 65px;
+    font-weight: normal;
+    font-size: 12px;
+    border: none;
+}
+
+.oddsToolTipBox {
+    content: '';
+    position: relative;
+    width: 13px;
+    height: 11px;
+    color: #FFFFFF;
+    background: #FF530D;
+    border: #FF530D;
+    margin: auto;
+    text-align: center;
+    font-size: 13px;
+    font-weight: bolder;
+    bottom: 6px;
+    padding: 2px;
+    z-index: 1;
+    cursor: pointer;
+    cursor: hand;
+}
+
+.oddsToolTipBox:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border: 3px solid;
+    border-top-color: #FF530D;
+    border-bottom: 0;
+    margin-left: -5px;
+    margin-bottom: -3px;
+}
+
+.leagueName {
+    font-size: 11px;
+    position: relative;
+    width: 80px;
+    text-align: left;
+}
+
+.leagueName img {
+    margin-left: 10px;
+}
+
+.leagueName div {
+    display: inline-block;
+    position: absolute;
+    margin-top: 3px;
+    margin-left: 5px;
+    width: 60px;
+}
+
+.eventDateTd {
+    font-size: 11px;
+}
+
+.eventDateTd div {
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+.eventTypeTd {
+    font-size: 11px;
+}
+
+.eventScoreTd {
+    width: 350px;
+}
+
+.eventType {
+    border: 1px solid #c5c5c5;
+    width: 55px;
+    padding-top: 2px;
+    color: #7e7e7e;
+    margin: auto;
+}
+
+.gameScoreContainer {
+    display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+    display: -ms-flexbox;  /* TWEENER - IE 10 */
+    display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+    display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.homeTeam {
+    display: inline-block;
+}
+
+.awayTeam {
+    display: inline-block;
+}
+
+.homeTeam, .awayTeam {
+    width: calc(50% - 50px);
+    font-family: "MalgunGothic";
+}
+
+.homeTeamScore {
+    display: inline-block;
+    width: 60px;
+}
+
+.awayTeamScore {
+    display: inline-block;
+    width: 60px;
+}
+
+.gameStatusContainer {
+    width: 85px;
+    height: 45px;
+    display: inline-block;
+    border-radius: 5px;
+    border: 1px solid #e5e5e5;
+    background: linear-gradient(#ffffff, #f7f4f4);
+    box-shadow: 1px 2px #f3f2f2;
+}
+
+.gameResult {
+    width: 46px;
+    height: 20px;
+    border-radius: 5px;
+    margin: auto;
+    margin-top: 5px;
+    font-size: 12px;
+    color: #fff;
+    font-weight: normal;
+    line-height: 20px;
+}
+
+.gameResult.gameResult-red {
+    background-color: #e9013d;
+}
+
+.gameResult.gameResult-blue {
+    background-color: #3f6bc3;
+}
+
+.gameResult.gameResult-gray {
+    background-color: #5b5f73;
+}
+
+.gameResult.gameResult-purple {
+    background-color: #78638e;
+}
+
+.gameResult.gameResult-green {
+    background-color: #00aa00;
+}
+
+.gameResult.gameResult-whiteGray {
+    background-color: #ebebeb;
+    color: #313131;
+    border: 1px solid #d0cece;
+}
+
+.gameStatus {
+    height: 17px;
+    margin: auto;
+    margin-top: 5px;
+    font-size: 12px;
+    font-weight: normal;
+    color: #8a8989;
+}
+
+.winningScore {
+    color: #e9013d;
+}
+
+.losingScore {
+    color: #000000;
+}
+
+.wonScore {
+    color: #e9013d;
+}
+
+.lostScore {
+    color: #8a8989;
+}

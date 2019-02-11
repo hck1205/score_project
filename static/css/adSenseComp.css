@@ -1,0 +1,11 @@
+.adSenseContainer {
+    display:inline-block;
+    width:728px;
+    margin-right: 5px;
+}
+
+.adsbygoogle {
+    display:inline-block;
+    width:728px;
+    height:90px
+}

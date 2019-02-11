@@ -1,0 +1,281 @@
+.oddTextContainer {
+    display: inline-block;
+    width: 53px;
+}
+
+.oddText {
+    display: inline-block;
+    font-size: 11px;
+    vertical-align: 2px;
+}
+
+.oddText.oddText-win {
+    color: #FF530D;
+}
+
+.oddText.oddText-draw {
+    color: #000000;
+}
+
+.oddText.oddText-draw span {
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+.oddText.oddText-lost {
+    color: #4a75cc;
+}
+
+
+.oddRateBox {
+    display: inline-block;
+    background-color: #e8e7e7;
+    margin-right: 2px;
+    font-size: 11px;
+    width: 50px;
+    padding-top: 4px;
+    padding-bottom: 2px;
+}
+
+.oddTextSubContainer {
+    background-color: #fdcf46;
+}
+
+.arrowContainer {
+    height: 0px;
+}
+
+.arrowDown {
+    content: '';
+    position: relative;
+    width: 0px;
+    height: 2px;
+    left: 41px;
+    color: transparent;
+    background: #4a75cc;
+    border: #4a75cc;
+    text-align: center;
+    font-size: 13px;
+    font-weight: bolder;
+    bottom: 11px;
+    padding: 2px;
+    z-index: 1;
+}
+
+
+.arrowDown::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border: 5px solid;
+    border-top-color: #4a75cc;
+    border-bottom: 0;
+    margin-left: -5px;
+    margin-bottom: -3px;
+}
+
+.arrowUp {
+    content: '';
+    position: relative;
+    width: 0px;
+    height: 2px;
+    left: 41px;
+    color: transparent;
+    background: #f92d53;
+    border: #f92d53;
+    text-align: center;
+    font-size: 13px;
+    font-weight: bolder;
+    bottom: 9px;
+    padding: 2px;
+    z-index: 1;
+}
+
+
+.arrowUp::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid #f92d53;
+    border-top-color: #f92d53;
+    margin-left: -5px;
+    margin-bottom: 4px;
+}
+
+.lineThrough {
+    text-decoration: line-through;
+    display: inline-block;
+}
+
+
+
+/*---CheckBox Customizing---*/
+
+/* The container */
+.chkBoxContainer {
+    margin-top: 3px;
+    width: 153px;
+    margin-left: 14px;
+}
+
+.chkBoxContainer.nonDisplay {
+    display: none;
+}
+
+.container {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    font-size: 12px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    width:13px;
+    height: 13px;
+}
+
+.container.oneRate {
+    height: 13px;
+}
+
+.container.xRate {
+    margin-left: 40px;
+    margin-right: 40px;
+    height: 13px;
+    cursor: auto;
+}
+
+.container.twoRate {
+    height: 13px;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 2;
+    left: -1px;
+    top: -1px;
+    width: 17px;
+    height: 16px;
+}
+
+/* Create a custom checkbox */
+.oddCheckBox {
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    height: 13px;
+    width: 13px;
+    background-color: #fff;
+    border-top: 1px solid #737373;
+    border-left: 1px solid #737373;
+    border-right: 1px solid #dcdcdc;
+    border-bottom: 1px solid #dcdcdc;
+}
+
+.oddCheckBox.disabled {
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    height: 13px;
+    width: 13px;
+    background-color: #a3a3a3;
+    border-top: 1px solid #737373;
+    border-left: 1px solid #737373;
+    border-right: 1px solid #dcdcdc;
+    border-bottom: 1px solid #dcdcdc;
+    cursor: auto;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .oddCheckBox {
+    background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .oddCheckBox {
+    background-color: #666867;
+}
+
+.container input:disabled {
+    cursor: auto;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.oddCheckBox:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .oddCheckBox:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .oddCheckBox:after {
+    left: 4px;
+    top: 0px;
+    width: 3px;
+    height: 8px;
+    border: solid #aeaeae;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+/*---End CheckBox Customizing---*/
+
+.oddCheckBox.noticeOddChkBox {
+    position: absolute;
+    top: -2px;
+    left: -1px;
+    height: 12px;
+    width: 12px;
+    background-color: #fff !important;
+    border: 2px solid #ff7f00;
+}
+
+.oddCheckBox.correctOddChkBox {
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    height: 12px;
+    width: 12px;
+    background-color: #000 !important;
+    border: 2px solid #ff7f00;
+}
+
+.oddCheckBox.correctOddChkBox:after {
+    left: 4px;
+    top: 0px;
+    width: 3px;
+    height: 8px;
+    border: solid #ff7f00;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.oddCheckBox.noticeOddChkBox:after {
+    left: 4px;
+    top: 0px;
+    width: 3px;
+    height: 8px;
+    border: solid #ff7f00;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}

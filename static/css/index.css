@@ -1,0 +1,59 @@
+.pageContainer {
+    font-family: "굴림";
+    width: 100%;
+    margin: auto;
+    background: #f2f4f7;
+    padding-top: 5px;
+}
+
+.footer {
+    font-family: "굴림";
+    width:100%;
+    margin: auto;
+}
+
+.footer .footerTitle {
+    display: inline-block;
+    font-size: 12px;
+    position: absolute;
+    margin-top: 3px;
+    margin-left: 2px;
+    font-weight: bold;
+}
+
+.footer .footerContent {
+    font-size: 11px;
+    color: #8a8989;
+    margin-left: 15px;
+    margin-top: 6px;
+}
+
+.footerContent span {
+    color: #000000;
+}
+
+.loader {
+    border: 2px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 2px solid #e82d0c;
+    border-bottom: 2px solid #e82d0c;
+    width: 90px;
+    height: 90px;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 1s linear infinite;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 300px;
+    margin-bottom: 300px;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

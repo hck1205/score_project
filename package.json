@@ -1,0 +1,43 @@
+{
+  "name": "score_project",
+  "version": "1.0.0",
+  "description": "score_project",
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "babel-polyfill": "^6.26.0",
+    "cors": "^2.8.5",
+    "cross-env": "^5.2.0",
+    "css-loader": "^2.1.0",
+    "express": "^4.16.4",
+    "http": "0.0.0",
+    "moment": "^2.24.0",
+    "moment-timezone": "^0.5.23",
+    "next": "^7.0.3",
+    "react": "^16.8.1",
+    "react-device-detect": "^1.6.2",
+    "react-dom": "^16.8.1",
+    "react-ga": "^2.5.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "build": "next build",
+    "start": "node proto_server.js",
+    "start:dev": "cross-env NODE_ENV=development node proto_server.js dev",
+    "start:beta": "cross-env NODE_ENV=beta node proto_server.js dev",
+    "start:pro": "next build && cross-env NODE_ENV=production node proto_server.js dev",
+    "export:dev": "next build && cross-env NODE_ENV=development next export",
+    "export:beta": "next build && cross-env NODE_ENV=beta next export",
+    "export:pro": "next build && cross-env NODE_ENV=production next export"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hck1205/score_project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hck1205/score_project/issues"
+  },
+  "homepage": "https://github.com/hck1205/score_project#readme"
+}

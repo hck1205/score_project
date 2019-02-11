@@ -1,0 +1,827 @@
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.calcContainer {
+    display: contents;
+    width:100%;
+}
+
+.iFrameMode {
+    display: unset;
+    position: absolute;
+    opacity: 0;
+    z-index: 2;
+}
+
+.calcContainer.nonDisplay {
+    display: none;
+}
+
+.calcContainer.iFrameMode.nonDisplay {
+    display: none;
+}
+
+.calcEventSeqTd {
+    position: relative;
+}
+
+.calcSeqNo {
+}
+
+.correctCircleMark {
+    height: 7px;
+    width: 7px;
+    background-color: #e90000;
+    border-radius: 50%;
+    margin-left: 28px;
+    margin-top: -4px;
+    position: absolute;
+}
+
+.sticky {
+    position: fixed;
+    position: -webkit-sticky;
+    position: sticky;
+    bottom: 0;
+}
+
+.calcMenuHide {
+    display: none;
+}
+
+.calcMenuContainer {
+    bottom: 0;
+    width: 100%;
+    height: 58px;
+    background-color: #303647;
+    color: white;
+    text-align: center;
+    z-index: 2;
+}
+
+.calcMenuDummy {
+    background-color: #f2f4f7;
+    border: 0px;
+    margin: 0px;
+    height: 22px;
+}
+
+.calcMenuLeftText {
+    display: inline-block;
+    float: left;
+    margin-left: 13px;
+    margin-top: 14px;
+    font-size: 13px;
+    color: #e1e3e8;
+}
+
+.calcMenuCenterTextContainer {
+    position: absolute;
+    width: 450px;
+    margin-top: 9px;
+    margin-left: 190px;
+}
+
+.calcMenuCenterTextContainer.nonDisplay {
+    display: none;
+}
+
+.calcNoticeSymbol {
+    width: 10px;
+    height: 10px;
+    font-size: 10px;
+    border: 1px solid #a8acb5;
+    display: inline-block;
+}
+
+.calcNoticeText {
+    display: inline-block;
+    font-size: 11px;
+}
+
+.calcNoticeText.typeA {
+    font-weight: bold;
+    margin-left: 4px;
+    margin-right: 3px;
+    color: #f5f8fd;
+}
+
+.calcNoticeText.typeB {
+    color: #a8acb5;
+}
+
+.calcNoticeText.typeC {
+    margin-left: 5px;
+    margin-right: 3px;
+}
+
+.calcNoticeText.typeD {
+    margin-left: -3px;
+    color: #a8acb5;
+}
+
+.calcMenuSetList {
+    display: inline-block;
+    width: 80%;
+    height: 36px;
+    text-align: left;
+}
+
+.calcMenuSet {
+    display: inline-block;
+    width: 64px;
+    height: 23px;
+    margin-top: 8px;
+    background-color: #89909d;
+    border-radius: 3px;
+    font-size: 13px;
+    text-align: center;
+    line-height: 21px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.calcMenuSet.active {
+    background-color: #db3716;
+}
+
+.calcAddOddSetBtn {
+    display: inline-block;
+    border: 1px solid #a8acb5;
+    border-radius: 4px;
+    color: #eaeaea;
+    font-size: 12px;
+    width: 74px;
+    height: 22px;
+    cursor: pointer;
+    float: right;
+    margin-top: 7px;
+    margin-right: -11px;
+    text-align: center;
+}
+
+.calcAddOddSetBtn.nonDisplay {
+    display: none;
+}
+
+.calcAddIcon {
+    vertical-align: -6px;
+    margin-left: 2px;
+}
+
+.calcExpandMenuContainer {
+    bottom: 0;
+    width: 100%;
+    height: 360px;
+    background: #333949;
+    color: white;
+    text-align: center;
+    z-index: 2;
+}
+
+.calcMenuHeader {
+    border-bottom: 2px solid #0b0b0b;
+    height: 34px;
+    background: linear-gradient(to bottom, #5f6376, #4f5366, #45495e, #373a4b, #212227);
+}
+
+.calcIcon {
+    float: left;
+    margin-top: 5px;
+    margin-left: 9px;
+}
+
+.calcCloseBoxContainer {
+    width: 14px;
+    height: 14px;
+    border: 1px solid #242a3e;
+    float: right;
+    margin-top: 9px;
+    margin-right: 13px;
+    border-radius: 2px;
+    cursor: pointer;
+    background: linear-gradient(to bottom, #6f7380, #4e5158, #3e3f46);
+}
+
+.calcCloseBox {
+    font-size: 11px;
+    color: #e0e0e2;
+    position: absolute;
+    margin-left: 3px;
+    margin-top: 2px;
+}
+/* X Icon*/
+.closeIcon:before, .closeIcon:after {
+    position: absolute;
+    content: ' ';
+    height: 10px;
+    width: 2px;
+    background-color: #e0e0e2;
+    margin-left: 3px;
+    margin-bottom: 1px;
+}
+.closeIcon:before {
+    transform: rotate(45deg);
+}
+.closeIcon:after {
+    transform: rotate(-45deg);
+}
+/* End X Icon*/
+
+.calcMenuTitle {
+    position: absolute;
+    margin-left: 300px;
+    margin-top: 11px;
+    font-size: 13px;
+    width: 250px;
+    color: #ececec;
+    float: left;
+    margin-left: 43%;
+}
+
+.calcTabContainer {
+    width: 98%;
+    height: 34px;
+    margin-left: 12px;
+    position: absolute;
+    border-bottom: 1px solid #1b1e27;
+    box-shadow: 0px 1px #494f61;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: left;
+}
+
+.calcSetAddBtn {
+    width: 74px;
+    height: 23px;
+    margin-top: 10px;
+    border: 1px solid #3b3b3b;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    border-bottom: none;
+    background: linear-gradient(to bottom, #747474, #5f5f5f, #2b2d2e);
+    color: #eaeaea;
+    font-size: 12px;
+    cursor: pointer;
+    display: inline-block;
+    margin-left: 2px;
+    text-align: center;
+}
+
+.calcSetAddBtn.nonDisplay {
+    display: none;
+}
+
+.calcAddBtnText {
+    display: inline-block;
+    vertical-align: -5px;
+    margin-left: 1px;
+}
+
+.calcTabText {
+    display: inline-block;
+    vertical-align: -5px;
+    padding-left: 11px;
+    padding-top: 5px;
+    width: 45px;
+    height: 18px;
+}
+
+.calcTab {
+    width: 74px;
+    height: 23px;
+    margin-top: 10px;
+    border: 1px solid #3b3b3b;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    border-bottom: none;
+    background: linear-gradient(to bottom, #747474, #5f5f5f, #2b2d2e);
+    color: #eaeaea;
+    font-size: 12px;
+    cursor: pointer;
+    display: inline-block;
+    margin-left: 2px;
+}
+
+.calcTab.active {
+    background: linear-gradient(to bottom, #ffffff, #ffffff, #bcbaba);
+    color: #000000;
+}
+
+/* X calcTab*/
+.calcTabCloseBtn {
+    width: 14px;
+    height: 12px;
+    display: inline-block;
+    vertical-align: -8px;
+    margin-left: -1px;
+    padding-bottom: 4px;
+}
+
+.calcTabCloseBtn:before,
+.calcTabCloseBtn:after {
+    position: absolute;
+    content: ' ';
+    height: 10px;
+    width: 2px;
+    background-color: #b1b1b3;
+    margin-left: 7px;
+    top: 17px;
+
+}
+.calcTabCloseBtn:before {
+    transform: rotate(45deg);
+}
+.calcTabCloseBtn:after {
+    transform: rotate(-45deg);
+}
+/* End X Icon*/
+
+.calcTabCloseBtn.onMouseOverCloseTab:before,
+.calcTabCloseBtn.onMouseOverCloseTab:after {
+    background-color: #de2b2b;
+}
+
+.calcTableContainer {
+    margin-top: 42px;
+}
+
+.calcTable {
+    margin: auto;
+    width: 97%;
+    text-align: center;
+    display: block;
+    border-collapse: collapse;
+    font-size: 12px;
+}
+
+.calcTable th {
+    padding: 0px;
+    border: 1px solid #fc7800;
+    height: 28px;
+    border-left: 1px;
+    border-right: 1px;
+}
+
+.calcTable td {
+    padding: 0px;
+    border: 1px solid #e1e1e1;
+    height: 28px;
+    cursor: pointer;
+}
+
+/*번호*/
+.calcTable th:nth-of-type(1),
+.calcTable tbody td:nth-of-type(1) {
+    /*width: 40px;*/
+    width: 4%;
+}
+
+/*경기일시*/
+.calcTable th:nth-of-type(2),
+.calcTable tbody td:nth-of-type(2) {
+    /*width: 115px;*/
+    width: 14%
+}
+
+/*대회명*/
+.calcTable th:nth-of-type(3),
+.calcTable tbody td:nth-of-type(3) {
+    /*width: 70px;*/
+    width: 7%
+}
+
+/*유형*/
+.calcTable th:nth-of-type(4),
+.calcTable tbody td:nth-of-type(4) {
+    /*width: 60px;*/
+    width: 7.5%
+}
+
+/*홈팀 vs 원정팀*/
+.calcTable th:nth-of-type(5),
+.calcTable tbody td:nth-of-type(5) {
+    /*width: 225px;*/
+    width: 27%;
+}
+.calcTable tbody td:nth-of-type(5) {
+    background-color: #f8f9fb;
+}
+
+/* 조합내역/결과 */
+.calcTable th:nth-of-type(6) {
+    /*width: 210px;*/
+    width: 35%;
+}
+.calcTable tbody td:nth-of-type(6),
+.calcTable tbody td:nth-of-type(7),
+.calcTable tbody td:nth-of-type(8) {
+    /*width: 70px;*/
+    width: 12%
+}
+
+/* 삭제 */
+.calcTable th:nth-of-type(7),
+.calcTable tbody td:nth-of-type(9) {
+    /*width: 60px;*/
+    width: 5%
+}
+
+/* 더미 Th */
+.calcTable th:nth-of-type(8),
+.calcTable tbody td:nth-of-type(10) {
+    width: 20px;
+    /*width: 2%;*/
+}
+
+.calcEmptyNotice.nonDisplay {
+    display: none;
+}
+
+.calcEmptyTd {
+    /*width: 800px   !important;*/
+    /*height: 125px  !important;*/
+    border: none   !important;
+    color: #b3b3b3 !important;
+    cursor: unset  !important;
+}
+
+.calcTableHeader {
+    background-color: #fc7800;
+    color: #ffffff;
+    height: 28px;
+    font-size: 12px;
+    text-align: center;
+}
+
+.calcTable tbody {
+    height: 157px;
+    width: 100%;
+    display: block;
+    overflow-y: scroll;
+    color: black;
+    background: #fff;
+    border-color: #ebebeb;
+}
+
+.calcMenuFooter {
+    margin: auto;
+    width: 100%;
+    height: 75px;
+}
+
+.calcPickInfoContainer {
+    margin-left: auto;
+    margin-right: auto;
+    height: 48px;
+    display: inline-block;
+    font-size: 12px;
+    text-align: left;
+    margin-top: 15px;
+}
+
+.calcPickInfoRightArrow {
+    width: 0;
+    height: 0;
+    border-top: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+    border-left: 3px solid #858c9a;
+    margin-right: 4px;
+    margin-bottom: 1px;
+    display: inline-block;
+}
+
+.calcPickInfo {
+    display: inline-block;
+    color: #b8b8b9;
+}
+
+.cntSelectedEventsText {
+
+}
+.cntSelectedEvents {
+    color: #fff;
+    width: 100px;
+    text-align: right;
+    margin-right: 25px;
+}
+
+.betAmtText {
+    margin-right: 20px;
+}
+.betAmtBox {
+    text-align: right;
+    line-height: 20px;
+    background-color: #ffffff;
+    border-radius: 3px;
+    height: 18px;
+    width: 65px;
+    padding-right: 3px;
+    color: #ff4200;
+    font-weight: bold;
+    border: 0;
+}
+.betAmt {}
+.betAmtCurrency {
+    margin-left: 5px;
+    color: #fff;
+}
+
+.estimateOddText {
+    margin-top: 14px;
+}
+.estimateOdd {
+    color: #fff;
+    width: 100px;
+    text-align: right;
+    margin-right: 25px;
+}
+
+.estimateRateText {
+    margin-right: 5px;
+}
+.estimateRate {
+    color: #fff;
+    width: 85px;
+    text-align: right;
+}
+
+.estimatePriceContainer {
+    margin-left: 3%;
+    margin-top: 20px;
+    height: 32px;
+    display: inline-block;
+    text-align: right;
+    vertical-align: 3px;
+}
+
+.calcRightArrow {
+    width: 0;
+    height: 0;
+    border-top: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+    border-left: 3px solid #858c9a;
+    margin-bottom: 20px;
+}
+
+.estimatePrice {
+    display: inline-block;
+}
+
+.estimatePrice.text {
+    font-size: 12px;
+    color: #b8b8b9;
+    margin-left: 6px;
+    vertical-align: 18px;
+}
+
+.estimatePrice.amount {
+    height: 30px;
+    width: 200px;
+    margin-left: 8px;
+    background: #181818;
+    border: 1px solid #4b4a4e;
+    border-radius: 3px;
+    vertical-align: 13px;
+    line-height: 30px;
+    padding-right: 5px;
+    color: #e04b1c;
+    font-weight: bold;
+    font-size: 24px;
+    text-align: right;
+}
+
+.estimatePrice.currency {
+    font-size: 12px;
+    margin-left: 6px;
+    vertical-align: 18px;
+}
+
+.calcListDate {
+    display: inline-block;
+    color: #838383;
+}
+
+.calcListTime {
+    display: inline-block;
+    margin-left: 3px;
+}
+
+.calcVsBox {
+    display: inline-block;
+    color: #ff6c00;
+    font-weight: bold;
+}
+
+.calcHome {
+    display: inline-block;
+    width: 100px;
+    text-align: right;
+    margin-right: 5px;
+}
+
+.calcAway {
+    display: inline-block;
+    width: 86px;
+    text-align: left;
+    margin-left: 6px;
+}
+
+.calcOption {
+    display: inline-block;
+}
+
+.calcOption.handicap {
+    color: #ff0042;
+}
+
+.calcOption.unover {
+    color: #2196d7;
+}
+
+.calcListDeleteBox {
+    width: 34px;
+    height: 14px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #c33207;
+    border-radius: 3px;
+    cursor: pointer;
+    line-height: 14px;
+    color: #c33207;
+    font-size: 11px;
+    font-family: Verdana;
+}
+
+.calcListResultContainerTd.calcWin {
+    background-color: rgba(255, 230, 154, 1);
+}
+
+.calcListResultContainer {
+    display: inline-block;
+    width: 66px;
+}
+
+.calcListResultContainer.one div.nonDisplay {
+    display: none;
+}
+
+.calcListResultContainer.x div.nonDisplay {
+    display: none;
+}
+
+.calcListResultContainer.two div.nonDisplay {
+    display: none;
+}
+
+.calcListLine {
+    height: 30px;
+    position: absolute;
+    padding-left: 1px;
+    margin-top: -5px;
+    background-color: #e1e1e1;
+}
+
+
+
+/* On mouse-over, add a grey background color */
+.calcInputContainer:hover input ~ .oddCheckBox {
+    background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.calcInputContainer input:checked ~ .oddCheckBox {
+    background-color: #666867;
+}
+
+.calcInputContainer input:disabled {
+    cursor: auto;
+}
+
+
+/* Show the checkmark when checked */
+.calcInputContainer input:checked ~ .oddCheckBox:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.calcInputContainer .oddCheckBox:after {
+    left: 4px;
+    top: 0px;
+    width: 3px;
+    height: 8px;
+    border: solid #aeaeae;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+.oddCheckBox.correctOddChkBox:after {
+    left: 4px;
+    top: 0px;
+    width: 3px;
+    height: 8px;
+    border: solid #ff7f00;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.oddCheckBox.noticeOddChkBox:after {
+    left: 4px;
+    top: 0px;
+    width: 3px;
+    height: 8px;
+    border: solid #ff7f00;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+/*---End CheckBox Customizing---*/
+
+.calcInputContainer {
+    display: inline-block;
+    position: relative;
+    font-size: 12px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    width: 13px;
+    height: 13px;
+    top: 3px;
+}
+
+.calcInputContainer.oneRate {
+    height: 13px;
+}
+
+.calcInputContainer.xRate {
+    height: 13px;
+}
+
+.calcInputContainer.twoRate {
+    height: 13px;
+}
+
+.calcOddText {
+    display: inline-block;
+    font-size: 11px;
+    width: 21px;
+}
+
+.calcOddText.one {
+    color:#ff0042;
+}
+
+.calcOddText.x {
+    color:#333333;
+}
+
+.calcOddText.two {
+    color:#4a75cc;
+}
+
+.calcOddText.notice {
+    color:blue;
+}
+
+.calcOddRate {
+    display: inline-block;
+    font-size: 11px;
+}
+
+.calcListEventType.calcWin {
+    border: 1px solid #b6b6b6;
+    border-radius: 3px;
+    width: 50px;
+    height: 17px;
+    line-height: 18px;
+    background-color: #b6b6b6;
+    color: #fff;
+}
+
+.calcListEventType.calcUnover {
+    border: 1px solid #00a4e9;
+    border-radius: 3px;
+    width: 50px;
+    height: 17px;
+    line-height: 18px;
+    background-color: #00a4e9;
+    color: #fff;
+}
+
+.calcListEventType.calcHandicap {
+    border: 1px solid #ffa200;
+    border-radius: 3px;
+    width: 50px;
+    height: 17px;
+    line-height: 18px;
+    background-color: #ffa200;
+    color: #fff;
+}

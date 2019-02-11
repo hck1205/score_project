@@ -1,0 +1,127 @@
+.tableContainer {
+    position: relative;
+}
+
+.eventTable {
+    margin: auto;
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    background-color: #fff;
+}
+
+.eventTable th:first-child {
+    border-bottom: 1px solid #e6e6e6;
+    border-top: 1px solid #e6e6e6;
+}
+
+.eventTable, td {
+    border: 1px solid #e6e6e6;
+}
+
+.tableHeader {
+    background-color: #3d95cc;
+    color: #ffffff;
+    height: 40px;
+    font-size: 12px;
+    text-align: center;
+}
+
+.tableHeader .numberTh {
+    justify-content: center;
+    text-align: center;
+    display: inline-flex;
+    margin-top: 12px;
+}
+
+.tableHeader td {
+    border: none;
+}
+
+.seqButton {
+    width: 12px;
+    height: 11px;
+    position: relative;
+    bottom: -1px;
+    margin-left: 4px;
+    background-color: #ffffff;
+    border-color: #ffffff;
+    padding: 0;
+    border: none;
+}
+
+.orderAsc {
+    border-left: 3px solid transparent;
+    border-right: 3px solid transparent;
+    border-top: 4px solid #8c8c8c;
+    position: absolute;
+    right: 3px;
+    bottom: 3px;
+}
+
+.orderDesc {
+    position: absolute;
+    border-left: 3px solid transparent;
+    border-right: 3px solid transparent;
+    border-bottom: 4px solid #8c8c8c;
+    right: 3px;
+    bottom: 4px;
+}
+
+.thRate {
+    width: 183px;
+}
+
+.homeTeam {
+    display: inline-block;
+}
+
+.awayTeam {
+    display: inline-block;
+}
+
+.emptyProtoContainer {
+    position: relative;
+}
+
+.emptyProtoImageWrapper {
+    width: 100%;
+    height: 50px;
+    margin-top: 85px;
+}
+
+.emptyProtoImage {
+    margin-top: -5px;
+    position: absolute;
+}
+
+.emptyProtoImage.soccer {
+    margin-left: -35px;
+    clip: rect(0px,127px,200px,60px);
+}
+
+.emptyProtoImage.baseball {
+    margin-left: -100px;
+    clip: rect(0px,127px,200px,60px);
+}
+
+.emptyProtoImage.basketball {
+    margin-left: -165px;
+    clip: rect(0px,200px,200px,138px);
+}
+
+.emptyProtoImage.volleyball {
+    margin-left: -230px;
+    clip: rect(0px,270px,200px,200px);
+}
+
+.emptyProtoMessageTypeA {
+    font-weight: bold;
+    margin-top: 40px;
+}
+
+.emptyProtoMessageTypeB {
+    font-size: 12px;
+    margin-top: 15px;
+    margin-bottom: 35px;
+}
