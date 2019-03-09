@@ -2,73 +2,71 @@
  * 20180530 by CkHong
  * 환경변수 재설정
  */
-let sub_name = "";         // sport.named.com/SUB_DOMAIN_NAME에 들어갈 변수: CSS, IMG등 폴더 인식을 위해 필요함
-let api_req_info = {}      // API 주소
-let push_server_info = {}  // 웹푸시 주소
+let sub_name = "";         // sport.named.com/SUB_DOMAIN_NAME for recognising CSS, IMG folder
+let api_req_info = {}      // API addre
+let push_server_info = {}  // webpush addre
 let live_score_url = ""
 let date = new Date()
 let queryTime = date.getTime()
 
 /**
- * bundle인지 로컬 서버인지 확인 package.json에 설정
+ * check if its bundle or local server configured in package.json
  */
 const process_arg = process.argv[2]
 if(process_arg != "dev") {sub_name = "/proto" }
 
 /**
- * API 주소 && 웹푸시 주소
+ * API addr && webpush addr
  */
 if(process.env.NODE_ENV == 'production') { // 상용서버
     api_req_info = {
-        api_name: 'named_pc',
-        api_key: 'rbvLq2Ah5wBl',
-        api_url: 'https://api.named.com/toto/v1'
+        api_name: '',
+        api_key: '',
+        api_url: ''
     }
 
     push_server_info = {
-        wss_url: 'wss://push.named.com:443/sub',
+        wss_url: '',
     }
 
-    live_score_url = "https://sports.named.com/gateway/livegames/live_schedule_gateway.php"
+    live_score_url = ""
 
 }
 
-// 스테이지 서버
+// stage server
 // http://sports.nnamed.com/proto/
 if (process.env.NODE_ENV == "beta") {
     api_req_info = {
-        api_name: 'named_pc',
-        api_key: 'LLPECp5oshiD',
-        api_url: 'http://api.beta.named.com/toto/v1'
+        api_name: '',
+        api_key: '',
+        api_url: ''
     }
 
     push_server_info = {
-        wss_url: 'ws://192.168.226.113:8880/sub',
+        wss_url: '',
     }
 
-    live_score_url = "http://sports.nnamed.com/gateway/livegames/live_schedule_gateway.php"
-    // live_score_url = "http://score.beta.named.com/gateway/livegames/live_schedule_gateway.php"
-
+    live_score_url = ""
+    
 }
 
-// 개발서버
-// http://score.beta.named.com/proto/
+// development mode
 if (process.env.NODE_ENV == "development") {
     api_req_info = {
-        api_name: 'named_pc',
-        api_key: 'rbvLq2Ah5wBl',
-        api_url: 'http://api.named.com/toto/v1'
+        api_name: '',
+        api_key: '',
+        api_url: ''
     }
 
     push_server_info = {
-        wss_url: 'ws://172.16.20.45:8880/sub',
+        wss_url: '',
     }
 
-    live_score_url = "http://score.dev.named.com/gateway/livegames/live_schedule_gateway.php"
+    live_score_url = ""
 }
 
 /**
- * 웹푸시 subscribe list
+ * webpush subscribe list
  */
 push_server_info.subs_list = [ // Sub은 공통
     'SUB toto.event',
